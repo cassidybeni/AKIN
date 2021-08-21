@@ -11,16 +11,15 @@ function TherapistList() {
     <br/>
     <br/>
     <br/>
-      <ul>
-        {therapistData.map((therapist) => {
-          return (
-            <li>
-              <Therapist key={therapist.id} therapist={therapist} />
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <ul>
+      {therapistData.map((therapist) => {
+        return (
+          <li>
+            <Therapist key={therapist.id} therapist={therapist} />
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
