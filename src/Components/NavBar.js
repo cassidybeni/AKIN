@@ -1,11 +1,9 @@
 import React from 'react';
 
- const Home = () => {
+export default function NavBar () {
     return (
         <div>
-            <h1>AKIN</h1>
+            
         </div>
     )
 }
-
-export default Home;
