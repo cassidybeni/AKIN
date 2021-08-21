@@ -15,9 +15,12 @@
   
 }
 
+.logo-container {
+  /* display: flex; */
+}
+
 .logo {
-  width: 80px;
- 
+  width: 90px;
 }
 
 a {
