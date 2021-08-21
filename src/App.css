@@ -1,16 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
-  margin: 5px;
+  
 }
 
 .navbar {
   border: 1px solid gold;
-  height: 50px
+  height: 100px
   
 }
 
+.logo {
+  width: 80px;
+ 
+}
+
 a {
-  padding: 20px;
+  padding-top: 20px;
   margin: 10px;
 }
 
