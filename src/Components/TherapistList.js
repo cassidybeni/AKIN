@@ -5,15 +5,21 @@ import Therapist from "./Therapist";
 function TherapistList() {
   return (
     <div>
-    <ul>
-      {therapistData.map((therapist) => {
-        return (
-          <li>
-            <Therapist key={therapist.id} therapist={therapist} />
-          </li>
-        );
-      })}
-    </ul>
+      <section>
+        <ul>
+          {therapistData.map((therapist) => {
+            return (
+              <li>
+                <Therapist key={therapist.id} therapist={therapist} />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <section>
+        <img src='' alt='' />
+      </section>
     </div>
   );
 }
