@@ -4,6 +4,13 @@ import Therapist from "./Therapist";
 
 function TherapistList() {
   return (
+    <div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <ul>
       {therapistData.map((therapist) => {
         return (

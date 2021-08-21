@@ -1,4 +1,4 @@
-const therapistdata = [
+const therapistData = [
   {
     id: 1,
     name: "Babita Spinelli",
@@ -28,3 +28,5 @@ const therapistdata = [
       "Anxiety, Depression, Eye Movement Desensitization and Reprocessing Therapy (EMDR), Trauma, Health professionals' mental healths, Dissociative disorders, Flash technique",
   },
 ];
+
+export default therapistData;
