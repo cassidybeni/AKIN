@@ -1,15 +1,18 @@
 .App {
   text-align: center;
+  margin: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  border: 1px solid gold;
+  height: 50px
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  padding: 20px;
+  margin: 10px;
 }
+
+
 
