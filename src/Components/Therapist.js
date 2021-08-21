@@ -5,6 +5,7 @@ function Therapist({therapist}) {
         <div>
 
             <h3>{therapist.name}</h3>
+            
 
         </div>
     )

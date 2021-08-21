@@ -1,5 +1,5 @@
 import React from "react";
-import therapistData from "../Data/therapistData";
+import therapistData from "../data/therapistData";
 import Therapist from "./Therapist";
 
 function TherapistList() {
@@ -20,6 +20,7 @@ function TherapistList() {
         );
       })}
     </ul>
+    </div>
   );
 }
 
