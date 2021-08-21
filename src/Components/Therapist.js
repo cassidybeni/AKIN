@@ -1,11 +1,16 @@
 import React from "react";
+import { GoogleMap } from 'react-google-map';
 
 function Therapist({ therapist }) {
   return (
     <div>
-      <h3>{therapist.name}</h3>
-      <img src={therapist.img} alt={therapist.name} />
-      <h4>{therapist.title}</h4>
+        <div className="therapist-container">
+            <div className="therapist-profile">
+                <h3>{therapist.name}</h3>
+                <img className="images" src={therapist.img} alt={therapist.name} />
+                <p>{therapist.title}</p>
+            </div>
+        </div>
     </div>
   );
 }

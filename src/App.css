@@ -21,8 +21,39 @@
 }
 
 a {
+  text-decoration: none;
   padding-top: 20px;
   margin: 10px;
+}
+
+a:hover {
+  color: #2A9D8F;
+}
+
+.therapist-container {
+  display: flex;
+  margin-left: 20px;
+}
+
+.therapist-profile {
+  
+  margin: 5px;
+  padding: 10px;
+}
+
+.therapist-profile p {
+ font-size: 10px;
+ text-align: center;
+}
+
+.therapist-profile h3 {
+  display:block;
+  margin:0 auto;
+  font-size: 14px;
+}
+
+.images {
+  height: 6em;
 }
 
 
