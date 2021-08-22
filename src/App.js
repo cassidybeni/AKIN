@@ -4,7 +4,7 @@ import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
 import Therapists from './Pages/Therapists';
 import CarmenLo from './Components/CarmenLo';
-import BabitaSpinelli from './Components/BabitaSpinelli';
+import BrittanyLynch from './Components/BrittanyLynch';
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
             <CarmenLo />
           </Route>
 
-          <Route path="/Therapists/BabitaSpinelli">
-            <BabitaSpinelli />
+          <Route path="/Therapists/BrittanyLynch">
+            <BrittanyLynch />
           </Route>
 
           <Route path="/Therapists">
