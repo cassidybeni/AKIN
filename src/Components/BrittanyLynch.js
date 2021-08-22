@@ -9,6 +9,7 @@ function BrittanyLynch() {
 
 
             <div className="provider-specialties">
+
             <h3>Specialties & Expertise</h3>
 
                     <ul>
@@ -23,31 +24,35 @@ function BrittanyLynch() {
                     <br/>
             </div>
 
-          
 
-            <h3>Professional Statement</h3>
-            <p>Brittany Lynch is a Licensed Clinical Social Worker who specializes in trauma, life transitions, couples work, and family therapy. She is also a registered yoga teacher, and often uses the mind-body principles of the practice to help clients get in tune with their bodies and regulate their emotions.
+            <div className="provider-statement">
+                <h3>Professional Statement</h3>
+                <p>Brittany Lynch is a Licensed Clinical Social Worker who specializes in trauma, life transitions, couples work, and family therapy. She is also a registered yoga teacher, and often uses the mind-body principles of the practice to help clients get in tune with their bodies and regulate their emotions.
 
-            Brittany takes an integrative approach to treatment, incorporating techniques like narrative therapy  within a greater psychodynamic framework. She also utilizes action-oriented tasks, such as journaling, drawing, writing, and other skills found in Cognitive Behavioral Therapy (CBT).
+                Brittany takes an integrative approach to treatment, incorporating techniques like narrative therapy  within a greater psychodynamic framework. She also utilizes action-oriented tasks, such as journaling, drawing, writing, and other skills found in Cognitive Behavioral Therapy (CBT).
 
-            When working with couples, Brittany helps partners navigate communication issues and sexual disorders, as well as overcoming extramarital affairs and the trust and jealousy issues that arise in its wake.
+                When working with couples, Brittany helps partners navigate communication issues and sexual disorders, as well as overcoming extramarital affairs and the trust and jealousy issues that arise in its wake.
 
-            Brittany has extensive experience working with clients who have faced trauma, including refugees, children and parents in the child welfare system, adolescents who have experienced chronic homelessness, and veterans. She uses this expertise to adapt a trauma-informed approach rooted in Trauma-Focused CBT.
+                Brittany has extensive experience working with clients who have faced trauma, including refugees, children and parents in the child welfare system, adolescents who have experienced chronic homelessness, and veterans. She uses this expertise to adapt a trauma-informed approach rooted in Trauma-Focused CBT.
 
-            Brittany works at BeWell in Midtown Manhattan, conveniently located near the Herald Square station, accessible by the B, D, F, Q, M, N, R, W or 6 train to 33rd St.</p>
-            <br/>
+                Brittany works at BeWell in Midtown Manhattan, conveniently located near the Herald Square station, accessible by the B, D, F, Q, M, N, R, W or 6 train to 33rd St.</p>
+                <br/>
+            </div>
 
-            <h3>Treatment Approaches</h3>
-            <ul>
-                <li>Cognitive Behavioral Therapy</li>
-                <li>Family Systems</li>
-                <li>Holistic Therapy</li>
-                <li>Internal Family Systems(IFS)</li>
-                <li>Minduful Practices</li>
-                <li>Supportive Therapy</li>
-            </ul>
-            <br/>
+            <div className="provider-treatments">
+                <h3>Treatment Approaches</h3>
+                <ul>
+                    <li>Cognitive Behavioral Therapy</li>
+                    <li>Family Systems</li>
+                    <li>Holistic Therapy</li>
+                    <li>Internal Family Systems(IFS)</li>
+                    <li>Minduful Practices</li>
+                    <li>Supportive Therapy</li>
+                </ul>
+                <br/>
+            </div>
 
+            <div className="insurance">
             <h4>Insurance</h4>
             <p>Brittany Lynch is not in-network with any insurances.</p>
             <br/>
@@ -57,6 +62,8 @@ function BrittanyLynch() {
             <p>Sliding scale: $200 - $225</p>
             <p>Couples sessions: $250 (60min)</p>
             <br/>
+
+            </div>
 
             <h4>Location & Hours</h4>
             <p>171 Madison Avenue, NY, NY, 10016</p>

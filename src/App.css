@@ -225,8 +225,29 @@ a:visited:hover {
 }
 
 .provider-specialties {
-  background-color: #e76f51c0;
+  background-color: #e76f51da;
   color: white;
   padding: 10px;
   border: 1px solid #e76f51c0;
+}
+
+.provider-statement {
+  background-color: #F4A261;
+  color: white;
+  padding: 10px;
+  border: 1px solid #e76f51c0;
+}
+
+.provider-treatments {
+  background-color: #f08080ea;
+  color: white;
+  padding: 10px;
+  border: 1px solid #F4A261;
+}
+
+.insurance {
+  background-color: #F4978E;
+  color: white;
+  padding: 10px;
+  border: 1px solid #f08080ea;
 }
