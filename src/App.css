@@ -251,3 +251,24 @@ a:visited:hover {
   padding: 10px;
   border: 1px solid #f08080ea;
 }
+
+.location {
+  background-color: #F8AD9D;
+  color: white;
+  padding: 10px;
+  border: 1px solid #f08080ea;
+}
+
+.work {
+  background-color: #B07BAC;
+  color: white;
+  padding: 10px;
+  border: 1px solid #f08080ea;
+}
+
+.languages {
+  background-color: #E3DAFF;
+  color: white;
+  padding: 10px;
+  border: 1px solid #B07BAC;
+}

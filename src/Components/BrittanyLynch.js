@@ -65,6 +65,8 @@ function BrittanyLynch() {
 
             </div>
 
+            <div className="location">
+
             <h4>Location & Hours</h4>
             <p>171 Madison Avenue, NY, NY, 10016</p>
             <ul>
@@ -78,18 +80,24 @@ function BrittanyLynch() {
             </ul>
             <br/>
 
-            <h4>Work and Education</h4>
-            <h6>Private Practice, 2019-Present</h6>
-            <h6>Iona College, Director of Social Work Field Education, 2019-Present</h6>
-            <h6>LIFT-NY, Non-Profit Manager, 2018-2019</h6>
-            <h6>Peace Corps, 2017-2018</h6>
-            <h6>Volunteers of America Illinois, Therapist, 2014-2017</h6>
-            <h6>University of Louissville, MSW-MFT, 2014</h6>
-            <h6>The George Washington University, BA, 2009</h6>
-            <br/>
+            </div>
+
+            <div className="work">
+                <h4>Work and Education</h4>
+                <h6>Private Practice, 2019-Present</h6>
+                <h6>Iona College, Director of Social Work Field Education, 2019-Present</h6>
+                <h6>LIFT-NY, Non-Profit Manager, 2018-2019</h6>
+                <h6>Peace Corps, 2017-2018</h6>
+                <h6>Volunteers of America Illinois, Therapist, 2014-2017</h6>
+                <h6>University of Louissville, MSW-MFT, 2014</h6>
+                <h6>The George Washington University, BA, 2009</h6>
+                <br/>
+            </div>
             
-            <h4>Languages</h4>
-            <p>English</p>
+            <div className="languages">
+                <h4>Languages</h4>
+                <p>English</p>
+            </div>
         </div>
     );
 };
