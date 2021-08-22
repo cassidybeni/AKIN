@@ -7,7 +7,7 @@ export default function NavBar () {
     return (
         <div className="nav-container">
             <div className="logo-container">
-                <img className='logo' src={Logo} />
+                <img className='logo' src={Logo} alt='logo' />
 
                 <div className='navbar'>
                     <Link to="/Home">Home</Link>
