@@ -204,7 +204,7 @@ class TherapistList extends React.Component {
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnoGPtQhDDR4JWf2DRgjVJFi-FQNrWt70&v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: `400px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
+            mapElement={<div style={{ height: `250%` }} />}
           />
         
       <ul>
