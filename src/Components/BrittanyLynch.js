@@ -1,21 +1,29 @@
 function BrittanyLynch() {
     return (
-        <div>
-            <h1>Brittany Lynch</h1>
-            <h4>Licensed Clinical Social Worker, LCSW</h4>
-            <br/>
+        <div className="provider-container">
+            <div className="provider-header">
+                <h1>Brittany Lynch</h1>
+                <h4>Licensed Clinical Social Worker, LCSW</h4>
+                <br/>
+            </div>
 
+
+            <div className="provider-specialties">
             <h3>Specialties & Expertise</h3>
-            <ul>
-                <li>Depression</li>
-                <li>Anxiety</li>
-                <li>Trauma</li>
-                <li>Mindfulness</li>
-                <li>Major life transitions</li>
-                <li>Identity issues</li>
-                <li>Relationship challenges</li>
-            </ul>
-            <br/>
+
+                    <ul>
+                        <li>Depression</li>
+                        <li>Anxiety</li>
+                        <li>Trauma</li>
+                        <li>Mindfulness</li>
+                        <li>Major life transitions</li>
+                        <li>Identity issues</li>
+                        <li>Relationship challenges</li>
+                    </ul>
+                    <br/>
+            </div>
+
+          
 
             <h3>Professional Statement</h3>
             <p>Brittany Lynch is a Licensed Clinical Social Worker who specializes in trauma, life transitions, couples work, and family therapy. She is also a registered yoga teacher, and often uses the mind-body principles of the practice to help clients get in tune with their bodies and regulate their emotions.

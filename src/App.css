@@ -203,3 +203,30 @@ a:visited:hover {
 .about-container img {
   height: 400px;
 }
+
+.provider-container {
+  text-align: center;
+  background-color: #2A9D8F; 
+}
+
+.provider-header {
+  padding: 10px;
+  border: 1px solid #E9C46A;
+  
+}
+
+.provider-header h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white
+}
+
+.provider-header h4 {
+  color: #E9C46A;
+}
+
+.provider-specialties {
+  background-color: #e76f51c0;
+  color: white;
+  padding: 10px;
+  border: 1px solid #e76f51c0;
+}
