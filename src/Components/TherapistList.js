@@ -1,45 +1,79 @@
 import React from "react";
 import therapistData from "../data/therapistData";
 import Therapist from "./Therapist";
-import axios from 'axios';
-import key from '../util/.env';
+import {
+  InfoWindow,
+  withScriptjs,
+  withGoogleMap,
+  GoogleMap,
+  Marker,
+} from "react-google-maps";
 
-function TherapistList() {
-  
-  const getMap = async () => {
-  const google = await axios.get(`src="https://maps.googleapis.com/maps/api/js?key=${key}&callback=initMap`)
-    .then(
-      function initMap() {
-        const options = {
-          zoom: 8,
-          center: { lat: 40.76541908162676, lng: -73.98061610772974 } 
-        }
-        const map = new google.maps.Map(document.getElementsByClassName('map'), options)
-      
-      }
+class TherapistList extends React.Component {
+  state = {
+    address: "",
+    city: "",
+    area: "",
+    state: "",
+    zoom: 15,
+    height: 400,
+    mapPosition: {
+      lat: 0,
+      lng: 0,
+    },
+    markerPosition: {
+      lat: 0,
+      lng: 0,
+    },
+  }
 
-    )
-    }
+  onMarkerDragEnd = (event) => {
+    let newLat = event.latLng.lat();
 
-  return (
-    <div>
-      <section className='list'>
-    <ul>
-      {therapistData.map((therapist) => {
-        return (
-          <li>
-            <Therapist key={therapist.id} therapist={therapist} />
-          </li>
-        );
-      })}
-    </ul>
-      </section>
+    
+  }
 
-      <section className='map'>
 
-      </section>
-    </div>
-  );
+  render () {
+
+    const MapWithAMarker = withScriptjs(withGoogleMap(props =>
+      <GoogleMap
+        defaultZoom={8}
+        defaultCenter={{ lat: -34.397, lng: 150.644 }}
+      >
+        <Marker
+          draggable={true}
+          onDragEnd={this.onMarkerDragEnd}
+          position={{ lat: -34.397, lng: 150.644 }}
+          InfoWindow
+        />
+      </GoogleMap>
+    ));
+
+
+
+    return (
+      <div>
+
+          <MapWithAMarker
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnoGPtQhDDR4JWf2DRgjVJFi-FQNrWt70&v=3.exp&libraries=geometry,drawing,places"
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `400px` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+          />
+        
+      <ul>
+        {therapistData.map((therapist) => {
+          return (
+            <li>
+              <Therapist key={therapist.id} therapist={therapist} />
+            </li>
+          );
+        })}
+      </ul>
+      </div>
+    );
+  }
 }
 
 export default TherapistList;
