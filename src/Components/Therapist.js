@@ -1,5 +1,4 @@
 import React from "react";
-import { GoogleMap } from 'react-google-map';
 
 function Therapist({ therapist }) {
   return (
@@ -14,5 +13,7 @@ function Therapist({ therapist }) {
     </div>
   );
 }
+
+
 
 export default Therapist;

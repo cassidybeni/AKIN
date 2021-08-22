@@ -6,27 +6,50 @@
 
 .App {
   text-align: center;
-  
+}
+
+.corner-image-right {
+  width: 100px;
+  height: 100px;
+  background: #2A9D8F;
+  border-radius: 50%;
+}
+
+.nav-container {
+  border: 1px solid gold;
 }
 
 .navbar {
-  border: 1px solid gold;
-  height: 100px
+  padding-top: 45px;
+  padding-left: 20px;
+  height: 100px;
+  width: 100px;
   
 }
 
+.logo-container {
+  display: flex;
+}
+
 .logo {
-  width: 80px;
- 
+  width: 150px;
 }
 
 a {
   text-decoration: none;
   padding-top: 20px;
-  margin: 10px;
+  margin: 10px; 
 }
 
 a:hover {
+  color: #2A9D8F;
+}
+
+a:visited {
+  color: #E76F51;
+}
+
+a:visited:hover {
   color: #2A9D8F;
 }
 
