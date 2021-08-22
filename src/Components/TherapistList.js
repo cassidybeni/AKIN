@@ -69,7 +69,6 @@ class TherapistList extends React.Component {
               position={{ lat: location[0], lng: location[1]}}
               InfoWindow
               onClick={this.handleOnClickMarker}
-              center={props.center}
             />
           )
         })}
