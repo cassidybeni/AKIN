@@ -1,7 +1,4 @@
 import React from "react";
-import therapistData from "../data/therapistData";
-import Therapist from "./Therapist";
-
 
 class TherapistList extends React.Component {
 

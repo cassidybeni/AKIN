@@ -30,7 +30,7 @@
   background-image: url('https://i.ibb.co/stQSwcv/2.png');
   left: 0px;
   z-index: -1;
-}
+} */
 
 @keyframes anim {
   from {
@@ -83,9 +83,9 @@
   text-align: center;
 }
 
-.box3 {
+/* .box3 {
   overflow: hidden;
-}
+} */
 /* 
 .container {
   width: 100%;
