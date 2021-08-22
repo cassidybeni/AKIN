@@ -6,7 +6,13 @@
 
 .App {
   text-align: center;
-  
+}
+
+.corner-image-right {
+  width: 100px;
+  height: 100px;
+  background: #2A9D8F;
+  border-radius: 50%;
 }
 
 .nav-container {
@@ -36,6 +42,14 @@ a {
 }
 
 a:hover {
+  color: #2A9D8F;
+}
+
+a:visited {
+  color: #E76F51;
+}
+
+a:visited:hover {
   color: #2A9D8F;
 }
 

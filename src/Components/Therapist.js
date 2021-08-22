@@ -14,4 +14,6 @@ function Therapist({ therapist }) {
   );
 }
 
+
+
 export default Therapist;
