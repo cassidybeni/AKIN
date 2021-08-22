@@ -176,3 +176,30 @@ a:visited:hover {
   width: 100%;
 }
 
+.about-container h1{
+  background-color: #E76F51;
+  font-family: aquire;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  height: 100px;
+}
+
+.about-container p {
+  text-align: center;
+  padding-top: 20px;
+  background-color: #F4A261;
+  color: white;
+  font-size: 18px;
+  height: 300px;
+}
+
+.img-container  {
+  align-items: center;
+  height: 400px;
+  background-color: #E9C46A;
+}
+
+.about-container img {
+  height: 400px;
+}
