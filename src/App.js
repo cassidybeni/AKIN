@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
+import About from './Pages/About';
 import Therapists from './Pages/Therapists';
 
 function App() {
@@ -18,6 +19,12 @@ function App() {
           <Route path="/Home">
             <Home />
           </Route>
+
+          <Route path="/About">
+            <About />
+          </Route>
+
+          
           
         </Switch>
       </Router>
