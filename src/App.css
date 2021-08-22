@@ -105,10 +105,12 @@
 } */
 
 .nav-container {
-  border: 1px solid gold;
+  background-color: #2A9D8F;
+  /* border: 1px solid gold; */
 }
 
 .navbar {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding-top: 45px;
   padding-left: 20px;
   height: 100px;
@@ -135,11 +137,11 @@ a:hover {
 }
 
 a:visited {
-  color: #E76F51;
+  color: whitesmoke;
 }
 
 a:visited:hover {
-  color: #2A9D8F;
+  color: #E9C46A;
 }
 
 .therapist-container {
