@@ -79,5 +79,8 @@ a:visited:hover {
   height: 6em;
 }
 
-
+.map {
+  height: 400px;
+  width: 100%;
+}
 

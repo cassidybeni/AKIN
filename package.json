@@ -6,7 +6,11 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+<<<<<<< HEAD
     "antd": "^4.16.12",
+=======
+    "axios": "^0.21.1",
+>>>>>>> 60934b9f6df6f39ca9ffbf61b41c5302d9189a15
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-geocode": "^0.2.3",

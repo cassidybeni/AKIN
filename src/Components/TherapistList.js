@@ -16,22 +16,40 @@ import {
 Geocode.setApiKey("AIzaSyBnoGPtQhDDR4JWf2DRgjVJFi-FQNrWt70")
 
 class TherapistList extends React.Component {
-  state = {
-    address: "",
-    city: "",
-    area: "",
-    state: "",
-    zoom: 15,
-    height: 400,
-    mapPosition: {
-      lat: 40.76541908162676,
-      lng: -73.98061610772974,
-    },
-    markerPosition: {
-      lat: 40.76541908162676,
-      lng: -73.98061610772974,
-    },
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      address: "",
+      city: "",
+      area: "",
+      state: "NY",
+      zoom: 11,
+      height: 400,
+      mapPosition: {
+        lat: 40.730610,
+        lng: -73.935242,
+      },
+      markerPosition: [],
+    };
   };
+
+  // state = {
+  //   address: "",
+  //   city: "",
+  //   area: "",
+  //   state: "",
+  //   zoom: 15,
+  //   height: 400,
+  //   mapPosition: {
+  //     lat: 40.76541908162676,
+  //     lng: -73.98061610772974,
+  //   },
+  //   markerPosition: {
+  //     lat: 40.76541908162676,
+  //     lng: -73.98061610772974,
+  //   },
+  // };
 
 
   getCity = ( addressArray ) => {
@@ -73,35 +91,36 @@ class TherapistList extends React.Component {
   }
 }
 
-  onMarkerDragEnd = (event) => {
-    let newLat = event.latLng.lat();
-    let newLng = event.latLng.lng();
 
-    Geocode.fromLatLng(newLat, newLng)
-    .then(response => {
-      const address = response.results[0].formatted_address,
-            addressArray = response.results[0].address_components,
-            city = this.getCity(addressArray),
-            area = this.getArea(addressArray),
-            state = this.getState(addressArray) 
+  // onMarkerDragEnd = (event) => {
+  //   let newLat = event.latLng.lat();
+  //   let newLng = event.latLng.lng();
 
-            this.setState({
-              address: ( address ) ? address: '',
-              area: ( area ) ? area : '',
-              city: ( city ) ? city : '',
-              state : ( state ) ? state : '',
-              markerPosition :  {
-                lat: newLat,
-                lng: newLng
-              },
-             mapPosition: {
-              lat: newLat,
-              lng: newLng
-             }     
-        })
-    });
+  //   Geocode.fromLatLng(newLat, newLng)
+  //   .then(response => {
+  //     const address = response.results[0].formatted_address,
+  //           addressArray = response.results[0].address_components,
+  //           city = this.getCity(addressArray),
+  //           area = this.getArea(addressArray),
+  //           state = this.getState(addressArray) 
+
+  //           this.setState({
+  //             address: ( address ) ? address: '',
+  //             area: ( area ) ? area : '',
+  //             city: ( city ) ? city : '',
+  //             state : ( state ) ? state : '',
+  //             markerPosition :  {
+  //               lat: newLat,
+  //               lng: newLng
+  //             },
+  //            mapPosition: {
+  //             lat: newLat,
+  //             lng: newLng
+  //            }     
+  //       })
+  //   });
     
-  };
+  // };
 
   onPlaceSelected = (place) => {
     const address = place.formatted_address,
@@ -128,26 +147,42 @@ class TherapistList extends React.Component {
     }) 
   }
 
+  componentDidMount() {
+    const coordinates = therapistData.map((therapist) => therapist.location)
+    console.log(coordinates)
+    this.setState({
+      markerPosition: coordinates
+    });
+  };
+
+  componentWillUnmount() {
+
+  };
 
   render () {
+    const { zoom, height, mapPosition, markerPosition } = this.state;
 
     const MapWithAMarker = withScriptjs(withGoogleMap(props =>
       <GoogleMap
-        defaultZoom={12}
-        defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
+        defaultZoom={zoom}
+        defaultCenter={{ lat: mapPosition.lat, lng: mapPosition.lng }}
       >
 
-      <Marker
-          draggable={true}
-          onDragEnd={this.onMarkerDragEnd}
-          position={{ lat: this.state.markerPosition.lat, lng: this.state.markerPosition.lng }}
+        {markerPosition.map((location) => {
+          return (
+            <Marker
+              draggable={false}
+              // onDragEnd={this.onMarkerDragEnd}
+              position={{ lat: location[0], lng: location[1]}}
           
-      />
+           />
+          )
+      })}
 
-      <AutoComplete style={{ width: "100%", height: '40px', paddingLeft: '16px', marginTop: '2px,', marginBottom: '2rem'}}
+      {/* <AutoComplete style={{ width: "100%", height: '40px', paddingLeft: '16px', marginTop: '2px,', marginBottom: '2rem'}}
         types={['(regions)']}
         onPlaceSelected={this.onPlaceSelected}
-      />
+      /> */}
 
       </GoogleMap>
     ));
@@ -157,13 +192,13 @@ class TherapistList extends React.Component {
     return (
       <div style={{ padding: '1rem', margin: '0 auto', maxWidth: 1000 }}>
         <h1>Therapists</h1>
-          <Descriptions  bordered>
+          {/* <Descriptions  bordered>
               <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
               <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>
               <Descriptions.Item label="State">{this.state.state}</Descriptions.Item>
               <Descriptions.Item label="Address">{this.state.address}</Descriptions.Item>
               
-            </Descriptions>,
+            </Descriptions>, */}
 
           <MapWithAMarker
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnoGPtQhDDR4JWf2DRgjVJFi-FQNrWt70&v=3.exp&libraries=geometry,drawing,places"
@@ -175,8 +210,8 @@ class TherapistList extends React.Component {
       <ul>
         {therapistData.map((therapist) => {
           return (
-            <li>
-              <Therapist key={therapist.id} therapist={therapist} />
+            <li key={therapist.id}>
+              <Therapist therapist={therapist} />
             </li>
           );
         })}

@@ -11,12 +11,15 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
+
           <Route path="/Therapists">
             <Therapists />
           </Route>
+
           <Route path="/Home">
             <Home />
           </Route>
+          
         </Switch>
       </Router>
     </div>
