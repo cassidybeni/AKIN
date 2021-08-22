@@ -6,7 +6,6 @@ import Therapists from './Pages/Therapists';
 
 function App() {
   return (
-    
     <div className="App">
       <Router>
         <NavBar />

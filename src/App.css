@@ -8,11 +8,8 @@
   text-align: center;
 }
 
-.corner-image-right {
-  width: 100px;
-  height: 100px;
-  background: #2A9D8F;
-  border-radius: 50%;
+.main {
+ background-color: #934f2b;
 }
 
 .nav-container {
