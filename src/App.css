@@ -30,7 +30,7 @@
   background-image: url('https://i.ibb.co/stQSwcv/2.png');
   left: 0px;
   z-index: -1;
-}
+} */
 
 @keyframes anim {
   from {
@@ -83,9 +83,9 @@
   text-align: center;
 }
 
-.box3 {
+/* .box3 {
   overflow: hidden;
-}
+} */
 /* 
 .container {
   width: 100%;
@@ -105,10 +105,12 @@
 } */
 
 .nav-container {
-  border: 1px solid gold;
+  background-color: #2A9D8F;
+  /* border: 1px solid gold; */
 }
 
 .navbar {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding-top: 45px;
   padding-left: 20px;
   height: 100px;
@@ -135,11 +137,11 @@ a:hover {
 }
 
 a:visited {
-  color: #E76F51;
+  color: whitesmoke;
 }
 
 a:visited:hover {
-  color: #2A9D8F;
+  color: #E9C46A;
 }
 
 .therapist-container {
