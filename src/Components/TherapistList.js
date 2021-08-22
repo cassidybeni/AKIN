@@ -10,22 +10,23 @@ import {
 } from "react-google-maps";
 
 class TherapistList extends React.Component {
-  state = {
-    address: "",
-    city: "",
-    area: "",
-    state: "",
-    zoom: 15,
-    height: 400,
-    mapPosition: {
-      lat: 0,
-      lng: 0,
-    },
-    markerPosition: {
-      lat: 0,
-      lng: 0,
-    },
-  }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      address: "",
+      city: "",
+      area: "",
+      state: "NY",
+      zoom: 11,
+      height: 400,
+      mapPosition: {
+        lat: 40.730610,
+        lng: -73.935242,
+      },
+      markerPosition: [],
+    };
+  };
 
   onMarkerDragEnd = (event) => {
     let newLat = event.latLng.lat();
@@ -33,20 +34,36 @@ class TherapistList extends React.Component {
     
   }
 
+  componentDidMount() {
+    const coordinates = therapistData.map((therapist) => therapist.location)
+    console.log(coordinates)
+    this.setState({
+      markerPosition: coordinates
+    });
+  };
+
+  componentWillUnmount() {
+
+  };
 
   render () {
+    const { zoom, height, mapPosition, markerPosition } = this.state;
 
     const MapWithAMarker = withScriptjs(withGoogleMap(props =>
       <GoogleMap
-        defaultZoom={8}
-        defaultCenter={{ lat: -34.397, lng: 150.644 }}
+        defaultZoom={zoom}
+        defaultCenter={{ lat: mapPosition.lat, lng: mapPosition.lng }}
       >
-        <Marker
-          draggable={true}
-          onDragEnd={this.onMarkerDragEnd}
-          position={{ lat: -34.397, lng: 150.644 }}
-          InfoWindow
-        />
+        {markerPosition.map((location) => {
+          return (
+            <Marker
+              draggable={true}
+              onDragEnd={this.onMarkerDragEnd}
+              position={{ lat: location[0], lng: location[1]}}
+              InfoWindow
+            />
+          )
+        })}
       </GoogleMap>
     ));
 
@@ -65,8 +82,8 @@ class TherapistList extends React.Component {
       <ul>
         {therapistData.map((therapist) => {
           return (
-            <li>
-              <Therapist key={therapist.id} therapist={therapist} />
+            <li key={therapist.id}>
+              <Therapist therapist={therapist} />
             </li>
           );
         })}
