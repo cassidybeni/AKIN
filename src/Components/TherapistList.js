@@ -25,14 +25,20 @@ class TherapistList extends React.Component {
         lng: -73.935242,
       },
       markerPosition: [],
+      newCenter: {}
     };
   };
 
   onMarkerDragEnd = (event) => {
     let newLat = event.latLng.lat();
-
-    
   }
+
+  handleOnClickMarker = () => {
+    this.setState({
+      zoom: 13,
+     
+    });
+  };
 
   componentDidMount() {
     const coordinates = therapistData.map((therapist) => therapist.location)
@@ -47,20 +53,23 @@ class TherapistList extends React.Component {
   };
 
   render () {
-    const { zoom, height, mapPosition, markerPosition } = this.state;
+    const { zoom, height, mapPosition, markerPosition, newCenter } = this.state;
 
     const MapWithAMarker = withScriptjs(withGoogleMap(props =>
       <GoogleMap
         defaultZoom={zoom}
         defaultCenter={{ lat: mapPosition.lat, lng: mapPosition.lng }}
       >
-        {markerPosition.map((location) => {
+        {markerPosition.map((location, i) => {
           return (
             <Marker
+              key={i}
               draggable={true}
               onDragEnd={this.onMarkerDragEnd}
               position={{ lat: location[0], lng: location[1]}}
               InfoWindow
+              onClick={this.handleOnClickMarker}
+              center={props.center}
             />
           )
         })}
